@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Mr mohammed serour</title>
+    <link rel="icon" type="image/x-icon" href="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        } */
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+            z-index: 9999999999999;
+            position: fixed;
+
+        }
+
+        .all2 {
+
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            z-index: 9999999999999999999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .login input[type="text"],
+        .login input[type="email"],
+        .login input[type="password"],
+        .login input[type="tel"],
+        .login select,
+        .login input[type="button"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .login input[type="text"]:focus,
+        .login input[type="email"]:focus,
+        .login input[type="password"]:focus,
+        .login input[type="tel"]:focus,
+        .login select:focus {
+            border-color: #007bff;
+        }
+
+        .login input[type="button"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .login input[type="button"]:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .login input[type="button"]#deleteBtn {
+            background: #dc3545;
+        }
+
+        .login input[type="button"]#deleteBtn:hover {
+            background: #c82333;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 1.1em;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="all2">
+        <div class="container">
+            <form class="login">
+                <h1>تسجيل الدخول للمنصة</h1>
+                <input id="name" type="text" placeholder="الاسم">
+                <input id="mail" type="email" placeholder="الايميل">
+                <input id="password" type="password" placeholder="كلمة السر">
+                <input id="phone" type="tel" placeholder="رقم الهاتف">
+                <select id="grade">
+                    <option value="">الصف</option>
+                    <option value="الصف الأول الثانوى">الصف الأول الثانوى</option>
+                    <option value="الصف الثانى الثانوى">الصف الثانى الثانوى</option>
+                    <option value="الصف الثالث الثانوى">الصف الثالث الثانوى</option>
+                </select>
+                <input id="loginBtn" type="button" value="تسجيل الدخول"> -->
+    <!-- <input id="signUpBtn" type="button" value="Sign Up"> -->
+    <!-- </form>
+            <div id="message" class="message"></div>
+        </div>
+    </div> -->
+
+
+    <div class="home" id="home">
+        <div class="header">
+            <img src="./images/a537cab8-9551-4f26-a4db-f28c3b2aa634 copy.png">
+            <ul class="nav">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">ماذا نقدم</a></li>
+                <li><a href="#courses">الكورسات</a></li>
+                <div class="close"><i class="fa-solid fa-x"></i></div>
+            </ul>
+
+            <div class="bars"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+
+        <div class="landing">
+            <div class="body">
+                <h3>منصة الأستاذ</h3>
+                <h1>محمد سرور</h1>
+                <h2>معلم مادة اللغة العربية</h2>
+                <p>المنصة الأولى لتدريس اللغة العربية للثانوية العامة</p>
+                <a href="#courses"><button>ذاكر الأن</button></a>
+                <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg" class="serour">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="about-container">
+
+
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out delay-150">
+            <style>
+                .path-0 {
+                    animation: pathAnim-0 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-0 {
+                    0% {
+                        d: path("M 0,400 L 0,100 C 111.87559808612443,122.33492822966507 223.75119617224885,144.66985645933013 326,137 C 428.24880382775115,129.33014354066987 520.8708133971292,91.6555023923445 599,74 C 677.1291866028708,56.3444976076555 740.7655502392347,58.70813397129187 846,69 C 951.2344497607653,79.29186602870813 1098.0669856459328,97.51196172248802 1204,104 C 1309.9330143540672,110.48803827751198 1374.9665071770337,105.24401913875599 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,400 L 0,100 C 93.00478468899522,92.73684210526315 186.00956937799043,85.47368421052632 269,95 C 351.99043062200957,104.52631578947368 424.96650717703346,130.84210526315792 537,125 C 649.0334928229665,119.1578947368421 800.1244019138755,81.1578947368421 893,68 C 985.8755980861245,54.842105263157904 1020.5358851674641,66.5263157894737 1102,76 C 1183.4641148325359,85.4736842105263 1311.732057416268,92.73684210526315 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,400 L 0,100 C 74.88995215311004,109.92344497607655 149.7799043062201,119.8468899521531 249,106 C 348.2200956937799,92.1531100478469 471.77033492822966,54.535885167464116 581,60 C 690.2296650717703,65.46411483253588 785.1387559808612,114.00956937799043 875,137 C 964.8612440191388,159.99043062200957 1049.6746411483255,157.42583732057415 1143,147 C 1236.3253588516745,136.57416267942585 1338.1626794258373,118.28708133971293 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,400 L 0,100 C 59.626794258373195,98.9090909090909 119.25358851674639,97.81818181818183 236,91 C 352.7464114832536,84.18181818181817 526.6124401913877,71.63636363636363 629,65 C 731.3875598086123,58.36363636363637 762.2966507177032,57.63636363636364 829,76 C 895.7033492822968,94.36363636363636 998.2009569377992,131.8181818181818 1106,139 C 1213.7990430622008,146.1818181818182 1326.8995215311004,123.0909090909091 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,400 L 0,100 C 111.87559808612443,122.33492822966507 223.75119617224885,144.66985645933013 326,137 C 428.24880382775115,129.33014354066987 520.8708133971292,91.6555023923445 599,74 C 677.1291866028708,56.3444976076555 740.7655502392347,58.70813397129187 846,69 C 951.2344497607653,79.29186602870813 1098.0669856459328,97.51196172248802 1204,104 C 1309.9330143540672,110.48803827751198 1374.9665071770337,105.24401913875599 1440,100 L 1440,400 L 0,400 Z");
+                    }
+                }
+            </style>
+            <path
+                d="M 0,400 L 0,100 C 111.87559808612443,122.33492822966507 223.75119617224885,144.66985645933013 326,137 C 428.24880382775115,129.33014354066987 520.8708133971292,91.6555023923445 599,74 C 677.1291866028708,56.3444976076555 740.7655502392347,58.70813397129187 846,69 C 951.2344497607653,79.29186602870813 1098.0669856459328,97.51196172248802 1204,104 C 1309.9330143540672,110.48803827751198 1374.9665071770337,105.24401913875599 1440,100 L 1440,400 L 0,400 Z"
+                stroke="none" stroke-width="0" fill="#1b77da" fill-opacity="0.53"
+                class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)">
+            </path>
+            <style>
+                .path-1 {
+                    animation: pathAnim-1 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-1 {
+                    0% {
+                        d: path("M 0,400 L 0,233 C 112.44019138755979,216.94258373205741 224.88038277511959,200.88516746411483 322,194 C 419.1196172248804,187.11483253588517 500.91866028708125,189.40191387559807 583,209 C 665.0813397129187,228.59808612440193 747.4449760765551,265.5071770334928 832,279 C 916.5550239234449,292.4928229665072 1003.3014354066986,282.5693779904306 1105,271 C 1206.6985645933014,259.4306220095694 1323.3492822966507,246.2153110047847 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,400 L 0,233 C 78.72727272727272,233.1244019138756 157.45454545454544,233.2488038277512 259,246 C 360.54545454545456,258.7511961722488 484.9090909090909,284.1291866028708 592,278 C 699.0909090909091,271.8708133971292 788.9090909090909,234.23444976076559 871,221 C 953.0909090909091,207.76555023923441 1027.4545454545455,218.93301435406698 1121,225 C 1214.5454545454545,231.06698564593302 1327.2727272727273,232.0334928229665 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,400 L 0,233 C 100.6794258373206,224.6267942583732 201.3588516746412,216.25358851674642 297,227 C 392.6411483253588,237.74641148325358 483.2440191387559,267.6124401913876 574,264 C 664.7559808612441,260.3875598086124 755.665071770335,223.29665071770333 864,215 C 972.334928229665,206.70334928229667 1098.0956937799044,227.20095693779905 1197,235 C 1295.9043062200956,242.79904306220095 1367.9521531100477,237.89952153110048 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,400 L 0,233 C 77.28229665071771,247.80382775119617 154.56459330143542,262.60765550239233 266,256 C 377.4354066985646,249.39234449760767 523.023923444976,221.3732057416268 615,210 C 706.976076555024,198.6267942583732 745.3397129186603,203.89952153110045 829,211 C 912.6602870813397,218.10047846889955 1041.6172248803828,227.0287081339713 1151,231 C 1260.3827751196172,234.9712918660287 1350.1913875598086,233.98564593301435 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,400 L 0,233 C 112.44019138755979,216.94258373205741 224.88038277511959,200.88516746411483 322,194 C 419.1196172248804,187.11483253588517 500.91866028708125,189.40191387559807 583,209 C 665.0813397129187,228.59808612440193 747.4449760765551,265.5071770334928 832,279 C 916.5550239234449,292.4928229665072 1003.3014354066986,282.5693779904306 1105,271 C 1206.6985645933014,259.4306220095694 1323.3492822966507,246.2153110047847 1440,233 L 1440,400 L 0,400 Z");
+                    }
+                }
+            </style>
+            <path
+                d="M 0,400 L 0,233 C 112.44019138755979,216.94258373205741 224.88038277511959,200.88516746411483 322,194 C 419.1196172248804,187.11483253588517 500.91866028708125,189.40191387559807 583,209 C 665.0813397129187,228.59808612440193 747.4449760765551,265.5071770334928 832,279 C 916.5550239234449,292.4928229665072 1003.3014354066986,282.5693779904306 1105,271 C 1206.6985645933014,259.4306220095694 1323.3492822966507,246.2153110047847 1440,233 L 1440,400 L 0,400 Z"
+                stroke="none" stroke-width="0" fill="#1b77da" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 200)">
+            </path>
+        </svg>
+
+        <div class="eleven" id="about">
+            <h1>ماذا نقدم</h1>
+        </div>
+        <div class="about">
+            <div class="card1">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card1-inner">
+                    <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+                    <h1>شروحات ومراجعات</h1>
+                </div>
+            </div>
+
+
+            <div class="card1">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card1-inner">
+                    <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+                    <h1>حل كتب خارجية</h1>
+                </div>
+            </div>
+
+
+
+            <div class="card1">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card1-inner">
+                    <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+                    <h1>متابعة وامتحانات</h1>
+                </div>
+            </div>
+        </div>
+
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out delay-150">
+            <style>
+                .path-0 {
+                    animation: pathAnim-0 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-0 {
+                    0% {
+                        d: path("M 0,400 L 0,100 C 79.75119617224883,120.60287081339713 159.50239234449765,141.20574162679426 255,129 C 350.49760765550235,116.79425837320574 461.7416267942583,71.77990430622009 575,58 C 688.2583732057417,44.22009569377991 803.5311004784689,61.674641148325364 902,73 C 1000.4688995215311,84.32535885167464 1082.133971291866,89.52153110047847 1169,93 C 1255.866028708134,96.47846889952153 1347.933014354067,98.23923444976077 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,400 L 0,100 C 70.24880382775117,105.89473684210526 140.49760765550235,111.78947368421053 256,116 C 371.50239234449765,120.21052631578947 532.2583732057417,122.73684210526315 628,113 C 723.7416267942583,103.26315789473685 754.4688995215311,81.26315789473684 833,80 C 911.5311004784689,78.73684210526316 1037.8660287081339,98.21052631578948 1147,105 C 1256.1339712918661,111.78947368421052 1348.066985645933,105.89473684210526 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,400 L 0,100 C 107.73205741626796,110.7177033492823 215.46411483253593,121.4354066985646 315,124 C 414.5358851674641,126.5645933014354 505.87559808612434,120.97607655502391 604,123 C 702.1244019138757,125.02392344497609 807.0334928229665,134.66028708133973 909,123 C 1010.9665071770335,111.33971291866028 1109.9904306220096,78.38277511961722 1198,71 C 1286.0095693779904,63.61722488038278 1363.0047846889952,81.80861244019138 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,400 L 0,100 C 94.83253588516749,78.69856459330144 189.66507177033498,57.39712918660288 300,69 C 410.334928229665,80.60287081339712 536.1722488038278,125.11004784688994 619,124 C 701.8277511961722,122.88995215311006 741.6459330143541,76.16267942583733 826,76 C 910.3540669856459,75.83732057416267 1039.244019138756,122.23923444976077 1149,134 C 1258.755980861244,145.76076555023923 1349.377990430622,122.88038277511961 1440,100 L 1440,400 L 0,400 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,400 L 0,100 C 79.75119617224883,120.60287081339713 159.50239234449765,141.20574162679426 255,129 C 350.49760765550235,116.79425837320574 461.7416267942583,71.77990430622009 575,58 C 688.2583732057417,44.22009569377991 803.5311004784689,61.674641148325364 902,73 C 1000.4688995215311,84.32535885167464 1082.133971291866,89.52153110047847 1169,93 C 1255.866028708134,96.47846889952153 1347.933014354067,98.23923444976077 1440,100 L 1440,400 L 0,400 Z");
+                    }
+                }
+            </style>
+            <path
+                d="M 0,400 L 0,100 C 79.75119617224883,120.60287081339713 159.50239234449765,141.20574162679426 255,129 C 350.49760765550235,116.79425837320574 461.7416267942583,71.77990430622009 575,58 C 688.2583732057417,44.22009569377991 803.5311004784689,61.674641148325364 902,73 C 1000.4688995215311,84.32535885167464 1082.133971291866,89.52153110047847 1169,93 C 1255.866028708134,96.47846889952153 1347.933014354067,98.23923444976077 1440,100 L 1440,400 L 0,400 Z"
+                stroke="none" stroke-width="0" fill="#1b77da" fill-opacity="0.53"
+                class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            <style>
+                .path-1 {
+                    animation: pathAnim-1 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-1 {
+                    0% {
+                        d: path("M 0,400 L 0,233 C 109.60765550239236,248.89473684210526 219.21531100478472,264.7894736842105 324,263 C 428.7846889952153,261.2105263157895 528.7464114832535,241.73684210526312 600,235 C 671.2535885167465,228.26315789473688 713.7990430622011,234.26315789473688 810,248 C 906.2009569377989,261.7368421052631 1056.0574162679425,283.2105263157895 1170,282 C 1283.9425837320575,280.7894736842105 1361.9712918660289,256.89473684210526 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,400 L 0,233 C 79.4736842105263,230.41626794258374 158.9473684210526,227.8325358851675 256,213 C 353.0526315789474,198.1674641148325 467.6842105263157,171.08612440191385 580,186 C 692.3157894736843,200.91387559808615 802.3157894736843,257.82296650717706 885,271 C 967.6842105263157,284.17703349282294 1023.0526315789475,253.62200956937798 1111,240 C 1198.9473684210525,226.37799043062202 1319.4736842105262,229.68899521531102 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,400 L 0,233 C 86.1531100478469,220.27272727272725 172.3062200956938,207.54545454545453 265,203 C 357.6937799043062,198.45454545454547 456.92822966507174,202.09090909090912 545,214 C 633.0717703349283,225.90909090909088 709.980861244019,246.09090909090907 812,240 C 914.019138755981,233.90909090909093 1041.1483253588517,201.54545454545453 1150,196 C 1258.8516746411483,190.45454545454547 1349.4258373205741,211.72727272727275 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,400 L 0,233 C 113.50239234449762,223.1244019138756 227.00478468899524,213.24880382775123 329,224 C 430.99521531100476,234.75119617224877 521.4832535885167,266.1291866028708 608,267 C 694.5167464114833,267.8708133971292 777.0622009569378,238.23444976076556 873,237 C 968.9377990430622,235.76555023923444 1078.267942583732,262.933014354067 1175,267 C 1271.732057416268,271.066985645933 1355.8660287081339,252.0334928229665 1440,233 L 1440,400 L 0,400 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,400 L 0,233 C 109.60765550239236,248.89473684210526 219.21531100478472,264.7894736842105 324,263 C 428.7846889952153,261.2105263157895 528.7464114832535,241.73684210526312 600,235 C 671.2535885167465,228.26315789473688 713.7990430622011,234.26315789473688 810,248 C 906.2009569377989,261.7368421052631 1056.0574162679425,283.2105263157895 1170,282 C 1283.9425837320575,280.7894736842105 1361.9712918660289,256.89473684210526 1440,233 L 1440,400 L 0,400 Z");
+                    }
+                }
+            </style>
+            <path
+                d="M 0,400 L 0,233 C 109.60765550239236,248.89473684210526 219.21531100478472,264.7894736842105 324,263 C 428.7846889952153,261.2105263157895 528.7464114832535,241.73684210526312 600,235 C 671.2535885167465,228.26315789473688 713.7990430622011,234.26315789473688 810,248 C 906.2009569377989,261.7368421052631 1056.0574162679425,283.2105263157895 1170,282 C 1283.9425837320575,280.7894736842105 1361.9712918660289,256.89473684210526 1440,233 L 1440,400 L 0,400 Z"
+                stroke="none" stroke-width="0" fill="#1b77da" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+        </svg>
+
+    </div>
+    <div class="courses" id="courses">
+
+        <div class="eleven">
+            <h1>الكورسات</h1>
+        </div>
+
+        <div class="wrapper">
+            <input id="inp" type="text" placeholder="ابحث عن أى كورس">
+            <button class="btn">search</button>
+        </div>
+
+        <div class="buttons">
+            <button class="all-courses">الكل</button>
+            <button class="first">أولى </button>
+            <button class="second">تانية </button>
+            <button class="third">تالثة</button>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="content">
+                    <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+                    <h1>شرح البلاغة</h1>
+                    <p>تالثة ثانوى شرح الأستاذ محمد سرور</p>
+                    <button class="button" id="firstButton">
+                        الدخول للكورس
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+                    <h1>شرح الأدب للثانوية العامة</h1>
+                    <p> تانية ثانوى شرح الأستاذ محمد سرور</p>
+                    <button class="button">
+                        الدخول للكورس
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+                    <h1>شرح النحو</h1>
+                    <p>أولى ثانوى شرح الأستاذ محمد سرور</p>
+                    <button class="button">
+                        الدخول للكورس
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Main content of the page -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>من نحن</h2>
+                <p>منصة الأستاذ محمد سرور معلم اللغة العربية للثانوية العامة و الأزهرية لشرح و تبسيط اللغة العربية
+                </p>
+            </div>
+            <div class="footer-section links">
+                <h2>أقسام المنصة</h2>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">ماذا نقدم</a></li>
+                    <li><a href="#">الكورسات</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>تواصل معنا</h2>
+                <p>Email: mahmoud123saad@gmail.com</p>
+                <p>Phone: 01126570450</p>
+                <p>Address: Delengate Behera</p>
+            </div>
+            <div class="footer-section social">
+                <h2>تابعنا</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 موقع تعليمى | Designed by Mahmoud Mizher , yasser Elherbawy
+        </div>
+    </footer>
+
+
+    <div class="first-form">
+
+        <input readonly type="text" placeholder="أدخل كلمة السر" class="username" class="userInput" id="userInput1">
+        <input type="text" placeholder="أدخل الكود" class="code">
+        <a href="first.html" class="go1">الدخول للكورس</a>
+        <span class="remove"><i class="fa-solid fa-rectangle-xmark"></i></span>
+
+    </div>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase, ref, set, get, child, remove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-XDZ_irFjJzS9s8kda_GdC0xnB59a1DU",
+            authDomain: "mahmoud-d5482.firebaseapp.com",
+            databaseURL: "https://mahmoud-d5482-default-rtdb.firebaseio.com",
+            projectId: "mahmoud-d5482",
+            storageBucket: "mahmoud-d5482.appspot.com",
+            messagingSenderId: "482661107116",
+            appId: "1:482661107116:web:ef626ef81c4994006f2609"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        function displayMessage(message, type) {
+            const messageDiv = document.getElementById("message");
+            messageDiv.textContent = message;
+            messageDiv.className = `message ${type}`;
+            messageDiv.style.display = 'block';
+        }
+
+        function saveToLocalStorage(user) {
+            localStorage.setItem('user', JSON.stringify(user));
+        }
+
+        document.getElementById("loginBtn").addEventListener("click", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("mail").value;
+            const password = document.getElementById("password").value;
+            const phone = document.getElementById("phone").value;
+            const grade = document.getElementById("grade").value;
+
+            if (name && email && password && phone && grade) {
+                const dbRef = ref(db);
+                get(child(dbRef, 'user/' + name)).then((snapshot) => {
+                    if (snapshot.exists() && snapshot.val().email === email && snapshot.val().password === password) {
+                        const user = { name, email, password, phone, grade };
+                        saveToLocalStorage(user);
+                        displayMessage('Login successful! Redirecting...', 'success');
+                        document.getElementsByClassName("all2")[0].style.display = "none"
+                    } else {
+                        displayMessage('Login failed: User not found or incorrect credentials.', 'error');
+                    }
+                }).catch((error) => {
+                    console.error('Error checking data: ', error);
+                    displayMessage('Error checking data.', 'error');
+                });
+            } else {
+                displayMessage('Please fill out all fields.', 'error');
+            }
+        });
+
+        // document.getElementById("signUpBtn").addEventListener("click", function (e) {
+        //     e.preventDefault();
+        //     const name = document.getElementById("name").value;
+        //     const email = document.getElementById("mail").value;
+        //     const password = document.getElementById("password").value;
+        //     const phone = document.getElementById("phone").value;
+        //     const grade = document.getElementById("grade").value;
+
+        //     if (name && email && password && phone && grade) {
+        //         const dbRef = ref(db);
+        //         get(child(dbRef, 'user/' + name)).then((snapshot) => {
+        //             if (snapshot.exists()) {
+        //                 displayMessage('User already exists. Please use a different name.', 'error');
+        //             } else {
+        //                 set(ref(db, 'user/' + name), {
+        //                     username: name,
+        //                     email: email,
+        //                     password: password,
+        //                     phone: phone,
+        //                     grade: grade
+        //                 }).then(() => {
+        //                     const user = { name, email, password, phone, grade };
+        //                     saveToLocalStorage(user);
+        //                     displayMessage('Profile created successfully! Redirecting...', 'success');
+        //                     setTimeout(() => { window.location.href = 'home.html'; }, 1500);
+        //                 }).catch((error) => {
+        //                     console.error('Error creating profile: ', error);
+        //                     displayMessage('Error creating profile.', 'error');
+        //                 });
+        //             }
+        //         }).catch((error) => {
+        //             console.error('Error checking data: ', error);
+        //             displayMessage('Error checking data.', 'error');
+        //         });
+        //     } else {
+        //         displayMessage('Please fill out all fields.', 'error');
+        //     }
+        // });
+    </script>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        }, false);
+
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        document.onkeydown = function (e) {
+            if (e.key == "F12" || (e.ctrlKey && e.shiftKey && (e.key == "I" || e.key == "J")) || (e.ctrlKey && e.key == "U")) {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
