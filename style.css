@@ -1274,3 +1274,72 @@ footer {
     top: -10px;
     left: -10px;
 }
+
+
+
+
+.second-form {
+
+    width: 300px;
+    background-color: #0075FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 20000000;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    display: none;
+    z-index: 1999999999999999999999999999999;
+
+
+}
+
+.username1 {
+
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    outline: none;
+    border: 1px solid #DB4437;
+
+}
+
+
+.code1 {
+
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #DB4437;
+}
+
+
+.go2 {
+
+    color: #0075FF;
+    border: 1px solid green;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+
+.remove1 i {
+
+    color: #CCC;
+    font-size: 40px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
