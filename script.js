@@ -558,7 +558,7 @@ go3.addEventListener('click', function (event) {
 
 
 
-    if (validCredentials2[userName2.value] && validCredentials1[userName2.value] === code2.value) {
+    if (validCredentials2[userName2.value] && validCredentials2[userName2.value] === code2.value) {
 
         alert('تم التسجيل بنجاح');
         // Uncomment the line below to proceed with form submission
