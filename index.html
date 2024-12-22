@@ -497,21 +497,21 @@
 
 
 
-    <scrip src="script.js">
-        </script>
-        <script>
-            // Disable right-click
-            document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-            }, false);
+    <script src="./script.js">
+    </script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        }, false);
 
-            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-            document.onkeydown = function (e) {
-                if (e.key == "F12" || (e.ctrlKey && e.shiftKey && (e.key == "I" || e.key == "J")) || (e.ctrlKey && e.key == "U")) {
-                    return false;
-                }
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        document.onkeydown = function (e) {
+            if (e.key == "F12" || (e.ctrlKey && e.shiftKey && (e.key == "I" || e.key == "J")) || (e.ctrlKey && e.key == "U")) {
+                return false;
             }
-        </script>
+        }
+    </script>
 </body>
 
 </html>
