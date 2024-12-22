@@ -587,7 +587,7 @@ h1 em {
 
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgb(204, 202, 202, .9), rgb(185, 185, 185, .9)), url("./images/413144-PDTI0Y-350.jpg");
+    background: linear-gradient(rgb(204, 202, 202, .5), rgb(185, 185, 185, .9)), url("./images/Download\ premium\ image\ of\ Black\ grid\ patterned\ iPhone\ wallpaper\,\ ripped\ paper\ border\ by\ Techi\ about\ iphone\ wallpaper\ dark\,\ dark\ paper\ backgrounds\,\ grid\ wallpaper\,\ ripped\ grid\ paper\,\ and\ dark\ grid\ 9829701.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
@@ -635,9 +635,10 @@ h1 em {
 
 
 .header li a:hover {
-    color: #FFDE5D;
-    border-bottom: 2px solid #DB4437;
+    color: #017cff;
+    border-bottom: 3px solid #DB4437;
     padding-bottom: 2px;
+    font-size: 60px;
 
 }
 
@@ -658,7 +659,7 @@ h1 em {
         align-items: center;
         direction: rtl;
         flex-direction: column;
-        background-color: #0075FF;
+        background-image: linear-gradient(rgb(204, 202, 202, .6), rgb(185, 185, 185, .6)), url(./images/Free\ \ Art\,\ Business\ Background\ Images\,\ Literary\ Background\ Photo\ Background\ PNG\ and\ Vectors.jpg);
         padding: 10px;
         position: absolute;
         top: 60px;
@@ -666,7 +667,16 @@ h1 em {
         width: 100%;
         height: 300px;
         box-shadow: 2px 3px 3px gray;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
+
+    }
+
+
+    .header li a {
+        color: #0b60bb;
 
     }
 
