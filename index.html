@@ -20,6 +20,8 @@
     <title>Mr mohammed serour</title>
     <link rel="icon" type="image/x-icon" href="./images/photo_2024-08-09_15-16-59.jpg">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         /* body {
             display: flex;
@@ -142,26 +144,8 @@
 
 <body>
 
-    <!-- <div class="all2">
-        <div class="container">
-            <form class="login">
-                <h1>تسجيل الدخول للمنصة</h1>
-                <input id="name" type="text" placeholder="الاسم">
-                <input id="mail" type="email" placeholder="الايميل">
-                <input id="password" type="password" placeholder="كلمة السر">
-                <input id="phone" type="tel" placeholder="رقم الهاتف">
-                <select id="grade">
-                    <option value="">الصف</option>
-                    <option value="الصف الأول الثانوى">الصف الأول الثانوى</option>
-                    <option value="الصف الثانى الثانوى">الصف الثانى الثانوى</option>
-                    <option value="الصف الثالث الثانوى">الصف الثالث الثانوى</option>
-                </select>
-                <input id="loginBtn" type="button" value="تسجيل الدخول"> -->
-    <!-- <input id="signUpBtn" type="button" value="Sign Up"> -->
-    <!-- </form>
-            <div id="message" class="message"></div>
-        </div>
-    </div> -->
+
+
 
 
     <div class="home" id="home">
@@ -513,116 +497,21 @@
 
 
 
-    <script src="script.js"></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getDatabase, ref, set, get, child, remove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+    <scrip src="script.js">
+        </script>
+        <script>
+            // Disable right-click
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            }, false);
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyB-XDZ_irFjJzS9s8kda_GdC0xnB59a1DU",
-            authDomain: "mahmoud-d5482.firebaseapp.com",
-            databaseURL: "https://mahmoud-d5482-default-rtdb.firebaseio.com",
-            projectId: "mahmoud-d5482",
-            storageBucket: "mahmoud-d5482.appspot.com",
-            messagingSenderId: "482661107116",
-            appId: "1:482661107116:web:ef626ef81c4994006f2609"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-
-        function displayMessage(message, type) {
-            const messageDiv = document.getElementById("message");
-            messageDiv.textContent = message;
-            messageDiv.className = `message ${type}`;
-            messageDiv.style.display = 'block';
-        }
-
-        function saveToLocalStorage(user) {
-            localStorage.setItem('user', JSON.stringify(user));
-        }
-
-        document.getElementById("loginBtn").addEventListener("click", function (e) {
-            e.preventDefault();
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("mail").value;
-            const password = document.getElementById("password").value;
-            const phone = document.getElementById("phone").value;
-            const grade = document.getElementById("grade").value;
-
-            if (name && email && password && phone && grade) {
-                const dbRef = ref(db);
-                get(child(dbRef, 'user/' + name)).then((snapshot) => {
-                    if (snapshot.exists() && snapshot.val().email === email && snapshot.val().password === password) {
-                        const user = { name, email, password, phone, grade };
-                        saveToLocalStorage(user);
-                        displayMessage('Login successful! Redirecting...', 'success');
-                        document.getElementsByClassName("all2")[0].style.display = "none"
-                    } else {
-                        displayMessage('Login failed: User not found or incorrect credentials.', 'error');
-                    }
-                }).catch((error) => {
-                    console.error('Error checking data: ', error);
-                    displayMessage('Error checking data.', 'error');
-                });
-            } else {
-                displayMessage('Please fill out all fields.', 'error');
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            document.onkeydown = function (e) {
+                if (e.key == "F12" || (e.ctrlKey && e.shiftKey && (e.key == "I" || e.key == "J")) || (e.ctrlKey && e.key == "U")) {
+                    return false;
+                }
             }
-        });
-
-        // document.getElementById("signUpBtn").addEventListener("click", function (e) {
-        //     e.preventDefault();
-        //     const name = document.getElementById("name").value;
-        //     const email = document.getElementById("mail").value;
-        //     const password = document.getElementById("password").value;
-        //     const phone = document.getElementById("phone").value;
-        //     const grade = document.getElementById("grade").value;
-
-        //     if (name && email && password && phone && grade) {
-        //         const dbRef = ref(db);
-        //         get(child(dbRef, 'user/' + name)).then((snapshot) => {
-        //             if (snapshot.exists()) {
-        //                 displayMessage('User already exists. Please use a different name.', 'error');
-        //             } else {
-        //                 set(ref(db, 'user/' + name), {
-        //                     username: name,
-        //                     email: email,
-        //                     password: password,
-        //                     phone: phone,
-        //                     grade: grade
-        //                 }).then(() => {
-        //                     const user = { name, email, password, phone, grade };
-        //                     saveToLocalStorage(user);
-        //                     displayMessage('Profile created successfully! Redirecting...', 'success');
-        //                     setTimeout(() => { window.location.href = 'home.html'; }, 1500);
-        //                 }).catch((error) => {
-        //                     console.error('Error creating profile: ', error);
-        //                     displayMessage('Error creating profile.', 'error');
-        //                 });
-        //             }
-        //         }).catch((error) => {
-        //             console.error('Error checking data: ', error);
-        //             displayMessage('Error checking data.', 'error');
-        //         });
-        //     } else {
-        //         displayMessage('Please fill out all fields.', 'error');
-        //     }
-        // });
-    </script>
-
-    <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        }, false);
-
-        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-        document.onkeydown = function (e) {
-            if (e.key == "F12" || (e.ctrlKey && e.shiftKey && (e.key == "I" || e.key == "J")) || (e.ctrlKey && e.key == "U")) {
-                return false;
-            }
-        }
-    </script>
+        </script>
 </body>
 
 </html>
