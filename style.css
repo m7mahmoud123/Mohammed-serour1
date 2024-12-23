@@ -780,31 +780,8 @@ h1 em {
 
     font-size: 70px;
     font-weight: 900;
-    color: #ffffff;
-    /* White text for strong contrast */
-    text-transform: uppercase;
-    /* Uppercase for emphasis */
-    letter-spacing: 4px;
-    /* Adds spacing between letters for elegance */
-    text-shadow:
-        3px 3px 0px #0075FF,
-        /* Blue shadow layer */
-        6px 6px 0px rgba(0, 0, 0, 0.5);
-    /* Dark shadow for 3D depth */
-    padding: 10px 20px;
-    /* Adds padding around the text */
-    display: inline-block;
-    /* Makes padding wrap the text size */
-    border: 3px solid #0075FF;
-    /* Adds a solid border */
-    border-radius: 12px;
-    /* Smooth rounded corners */
-    background: linear-gradient(45deg, #0075FF, #00C9FF);
-    /* Gradient background */
-    -webkit-background-clip: text;
-    /* Clips the gradient to the text */
-    -webkit-text-fill-color: transparent;
-    /* Makes the gradient visible */
+    color: #0075FF;
+    text-shadow: 2px 2px gray;
     animation: bounce 2s infinite;
     /* Bouncing animation */
 }
