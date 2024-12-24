@@ -102,14 +102,9 @@ third.onclick = function () {
 
 let bars = document.getElementsByClassName("bars")[0]
 let header = document.getElementsByClassName("nav")[0]
-let hide = document.getElementsByClassName('header')[0]
 
 bars.onclick = function () {
-    hide.style.display = "flex"
-}
-
-onscroll = function () {
-    hide.style.display = 'none'
+    header.style.display = "flex"
 }
 
 
