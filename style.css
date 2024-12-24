@@ -592,6 +592,9 @@ h1 em {
     background-size: cover;
 }
 
+
+
+
 .header {
 
     width: 100%;
@@ -635,7 +638,7 @@ h1 em {
 
 
 .header li a:hover {
-    color: #017cff;
+    color: #FFDE5D;
     border-bottom: 3px solid #DB4437;
     padding-bottom: 2px;
     font-size: 60px;
@@ -652,57 +655,115 @@ h1 em {
 
 
 
-    .header ul {
-
-        display: none;
-        justify-content: center;
-        align-items: center;
-        direction: rtl;
-        flex-direction: column;
-        background-image: linear-gradient(rgb(204, 202, 202, .6), rgb(185, 185, 185, .6)), url(./images/Free\ \ Art\,\ Business\ Background\ Images\,\ Literary\ Background\ Photo\ Background\ PNG\ and\ Vectors.jpg);
-        padding: 10px;
-        position: absolute;
-        top: 60px;
-        right: 0px;
-        width: 100%;
-        height: 300px;
-        box-shadow: 2px 3px 3px gray;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-
-    }
-
-
-    .header li a {
-        color: #0b60bb;
-
-    }
-
+    /* Header container */
     .header {
-
-        width: 100%;
+        width: 100;
         height: 10vh;
-        background-color: #0075FF;
+        background-color: transparent;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 10px 20px;
         position: fixed;
         top: 0;
-        z-index: 1000000000000000000000;
+        z-index: 10000;
         border-bottom: 4px solid #FFDE5D;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
     }
 
+    /* Logo image */
     .header img {
-
         width: 100px;
+        cursor: pointer;
+        /* Indicate clickable logo */
+    }
+
+    /* Navigation Menu */
+    .header ul {
+        display: none;
+        /* Initially hidden */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 300px;
+        background-image:
+            linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8)),
+            url(./images/d2f13747-69a9-485c-9299-71d25c2f112f.jpg);
+        /* Use simpler filename */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        animation: slide-down 0.3s ease-in-out;
+        /* Smooth transition */
+    }
+
+    /* Links inside the menu */
+    .header li a {
+        color: #0b60bb;
+        font-size: 30px;
+        text-decoration: none;
+        transition-duration: .5s ease;
+        /* Smooth effects */
     }
 
 
-    .active {
-        display: none;
+
+    /* Hover effect for links */
+    .header li a:hover {
+        color: #FFDE5D;
+        transform: scale(1.1);
+        /* Slight zoom effect */
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    /* Toggle class for menu visibility */
+    .toggle {
+        display: flex !important;
+        /* Override hidden display */
+    }
+
+    /* Animation for slide-down effect */
+    @keyframes slide-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .header ul {
+            width: 100%;
+            /* Full width for smaller screens */
+        }
+
+        .header {
+            padding: 10px;
+        }
+
+        .header img {
+            width: 80px;
+        }
     }
 
 
@@ -710,8 +771,13 @@ h1 em {
 
 .bars {
 
-    font-size: 50px;
+    font-size: 25px;
     color: #FFFFFF;
+}
+
+.show {
+
+    display: none;
 }
 
 
@@ -726,7 +792,9 @@ h1 em {
     }
 }
 
-
+.toggle {
+    display: none;
+}
 
 .close i {
 
@@ -1499,6 +1567,45 @@ footer {
 }
 
 
+/* From Uiverse.io by JulanDeAlb */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: #017cff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
 
 
 

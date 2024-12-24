@@ -108,6 +108,8 @@ bars.onclick = function () {
 }
 
 
+
+
 let close = document.getElementsByClassName("close")[0]
 
 close.onclick = function () {
