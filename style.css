@@ -722,7 +722,7 @@ h1 em {
         content: "";
         width: 10px;
         height: 10px;
-        background-color: #0b60bb;
+        background-color: #FFDE5D;
         position: absolute;
         border-radius: 50%;
         right: -20px;
@@ -732,7 +732,7 @@ h1 em {
 
 
     .header li a:hover::after {
-        background-color: red;
+        background-color: #0b60bb;
     }
 
 
