@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
     <style>
         /* body {
             display: flex;
@@ -418,6 +421,33 @@
 
 
 
+    <div class="slider">
+        <h1>أراء الطلاب</h1>
+
+        <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+            <swiper-slide>
+                <div class="comment">
+                    <img
+                        src="./images/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png">
+                    <h3>@saraAli</h3>
+                    <p>أحلى مدرس عربى ما شاء الله </p>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="comment">
+                    <img
+                        src="./images/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png">
+                    <h3>@M7mahmoud</h3>
+                    <p>العربى فى أمان مع سرور بصحيح والله</p>
+                </div>
+            </swiper-slide>
+
+        </swiper-container>
+    </div>
+
+
+
 
 
 
@@ -501,6 +531,7 @@
 
     <script src="./script.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- <script>
         // Disable right-click
         document.addEventListener('contextmenu', function (e) {
@@ -514,6 +545,8 @@
             }
         }
     </script> -->
+
+
 </body>
 
 </html>
