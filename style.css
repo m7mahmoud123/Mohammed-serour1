@@ -595,6 +595,7 @@ h1 em {
 
 
 
+
 .header {
 
     width: 100%;
@@ -666,7 +667,7 @@ h1 em {
         padding: 10px 20px;
         position: fixed;
         top: 0;
-        z-index: 10000;
+        z-index: 90000;
         border-bottom: 4px solid #FFDE5D;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         /* Subtle shadow */
@@ -689,13 +690,13 @@ h1 em {
         gap: 15px;
         padding: 20px;
         position: absolute;
-        top: 60px;
+        top: 0px;
         right: 0;
         width: 100%;
         height: 300px;
         background-image:
             linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8)),
-            url(./images/d2f13747-69a9-485c-9299-71d25c2f112f.jpg);
+            url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg);
         /* Use simpler filename */
         background-position: center;
         background-size: cover;
@@ -712,7 +713,26 @@ h1 em {
         font-size: 30px;
         text-decoration: none;
         transition-duration: .5s ease;
+        position: relative;
         /* Smooth effects */
+    }
+
+
+    .header li a::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #0b60bb;
+        position: absolute;
+        border-radius: 50%;
+        right: -20px;
+        top: 50%;
+        transition-duration: .5s;
+    }
+
+
+    .header li a:hover::after {
+        background-color: red;
     }
 
 
@@ -720,7 +740,7 @@ h1 em {
     /* Hover effect for links */
     .header li a:hover {
         color: #FFDE5D;
-        transform: scale(1.1);
+        transform: scale(.1);
         /* Slight zoom effect */
     }
 
@@ -798,7 +818,7 @@ h1 em {
 
 .close i {
 
-    color: #0b60bb;
+    color: rgb(192, 81, 81);
     position: absolute;
     top: 50px;
     left: 10px;
@@ -807,6 +827,8 @@ h1 em {
     border-radius: 10px;
     font-weight: 900;
 }
+
+
 
 
 
