@@ -573,13 +573,14 @@ h1 em {
 
 .card1-inner h1 {
 
-    background-color: #dad8d8;
-    color: #DB4437;
+    background-color: white;
+    color: #0075FF;
     margin: 15px;
     border-radius: 10px;
     padding: 6px;
     font-size: 30px;
     font-weight: 900;
+    text-shadow: 1px 2px 3px gray;
 }
 
 
@@ -1407,7 +1408,7 @@ footer {
 .first-form {
 
     width: 300px;
-    background-color: #0075FF;
+    background-image: url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg), linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1416,7 +1417,7 @@ footer {
     z-index: 20000000;
     height: 250px;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #0075FF;
     position: fixed;
     top: 100px;
     left: 50px;
@@ -1424,15 +1425,21 @@ footer {
     z-index: 1999999999999999999999999999999;
 
 
+
 }
 
 .username {
-
-    width: 100%;
+    width: 100px;
+    height: 100px;
     text-align: center;
-    height: 40px;
     outline: none;
     border: 1px solid #DB4437;
+    border: none;
+    font-size: 50px;
+    font-weight: 900;
+    border-radius: 50%;
+    color: #0075FF;
+    box-shadow: 2px 2px 4px gray;
 
 }
 
@@ -1441,29 +1448,43 @@ footer {
 
     width: 100%;
     text-align: center;
-    height: 40px;
+    height: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
     outline: none;
-    border: 1px solid #DB4437;
+    border: 2px solid #0075FF;
+    border-radius: 10px;
+    font-size: 25px;
+    box-shadow: 2px 2px 5px gray;
 }
 
 
 .go1 {
 
-    color: #0075FF;
-    border: 1px solid green;
+    background-color: #0075FF;
+    border: 2px solid white;
     padding: 5px;
-    background-color: #eee;
+    color: white;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 1px 2px 3px gray;
+    transition-duration: .9s;
+}
+
+.go1:hover {
+    background-color: white;
+    color: #0075FF;
+    border: 2px solid#007BFF;
+
 }
 
 
 
 .remove i {
 
-    color: #CCC;
+    color: #0075FF;
     font-size: 40px;
     position: absolute;
     top: -10px;
@@ -1476,7 +1497,7 @@ footer {
 .second-form {
 
     width: 300px;
-    background-color: #0075FF;
+    background-image: url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg), linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1485,7 +1506,7 @@ footer {
     z-index: 20000000;
     height: 250px;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #0075FF;
     position: fixed;
     top: 100px;
     left: 50px;
@@ -1493,46 +1514,67 @@ footer {
     z-index: 1999999999999999999999999999999;
 
 
+
 }
 
 .username1 {
-
-    width: 100%;
+    width: 100px;
+    height: 100px;
     text-align: center;
-    height: 40px;
     outline: none;
     border: 1px solid #DB4437;
+    border: none;
+    font-size: 50px;
+    font-weight: 900;
+    border-radius: 50%;
+    color: #0075FF;
+    box-shadow: 2px 2px 4px gray;
 
 }
 
 
 .code1 {
 
+
     width: 100%;
     text-align: center;
-    height: 40px;
+    height: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
     outline: none;
-    border: 1px solid #DB4437;
+    border: 2px solid #0075FF;
+    border-radius: 10px;
+    font-size: 25px;
+    box-shadow: 2px 2px 5px gray;
 }
 
 
 .go2 {
 
-    color: #0075FF;
-    border: 1px solid green;
+    background-color: #0075FF;
+    border: 2px solid white;
     padding: 5px;
-    background-color: #eee;
+    color: white;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 1px 2px 3px gray;
+    transition-duration: .9s;
+}
+
+.go2:hover {
+    background-color: white;
+    color: #0075FF;
+    border: 2px solid#007BFF;
+
 }
 
 
 
 .remove1 i {
 
-    color: #CCC;
+    color: #0075FF;
     font-size: 40px;
     position: absolute;
     top: -10px;
@@ -1546,7 +1588,7 @@ footer {
 .third-form {
 
     width: 300px;
-    background-color: #0075FF;
+    background-image: url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg), linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1555,23 +1597,28 @@ footer {
     z-index: 20000000;
     height: 250px;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #0075FF;
     position: fixed;
     top: 100px;
     left: 50px;
     display: none;
     z-index: 1999999999999999999999999999999;
 
-
 }
 
 .username2 {
 
-    width: 100%;
+    width: 100px;
+    height: 100px;
     text-align: center;
-    height: 40px;
     outline: none;
     border: 1px solid #DB4437;
+    border: none;
+    font-size: 50px;
+    font-weight: 900;
+    border-radius: 50%;
+    color: #0075FF;
+    box-shadow: 2px 2px 4px gray;
 
 }
 
@@ -1580,29 +1627,43 @@ footer {
 
     width: 100%;
     text-align: center;
-    height: 40px;
+    height: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
     outline: none;
-    border: 1px solid #DB4437;
+    border: 2px solid #0075FF;
+    border-radius: 10px;
+    font-size: 25px;
+    box-shadow: 2px 2px 5px gray;
 }
 
 
 .go3 {
 
-    color: #0075FF;
-    border: 1px solid green;
+    background-color: #0075FF;
+    border: 2px solid white;
     padding: 5px;
-    background-color: #eee;
+    color: white;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 1px 2px 3px gray;
+    transition-duration: .9s;
+}
+
+.go3:hover {
+    background-color: white;
+    color: #0075FF;
+    border: 2px solid#007BFF;
+
 }
 
 
 
 .remove2 i {
 
-    color: #CCC;
+    color: #0075FF;
     font-size: 40px;
     position: absolute;
     top: -10px;
