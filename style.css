@@ -98,12 +98,16 @@ html {
 #inp {
     width: 500px;
     color: brown;
-    height: 40px;
+    height: 60px;
     margin-right: 20px;
     font-size: 20px;
     padding-right: 8px;
     direction: rtl;
     text-align: center;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #0075FF;
+
 }
 
 .btn {
