@@ -578,7 +578,7 @@ h1 em {
     margin: 15px;
     border-radius: 10px;
     padding: 6px;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bolder;
 
 }
@@ -1056,6 +1056,7 @@ button:hover {
 
 .serour {
     animation: fadeIn 2s ease-in-out;
+    width: 100%;
 }
 
 
