@@ -1408,7 +1408,9 @@ footer {
 .first-form {
 
     width: 300px;
-    background-image: url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg), linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8));
+    background-image:
+        linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8)),
+        url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1497,7 +1499,9 @@ footer {
 .second-form {
 
     width: 300px;
-    background-image: url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg), linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8));
+    background-image:
+        linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8)),
+        url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1588,7 +1592,9 @@ footer {
 .third-form {
 
     width: 300px;
-    background-image: url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg), linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8));
+    background-image:
+        linear-gradient(rgba(204, 202, 202, 0.7), rgba(185, 185, 185, 0.8)),
+        url(./images/33859034-3568-4bf2-8d7a-63a2fbd37347.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
