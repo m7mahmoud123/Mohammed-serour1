@@ -16,13 +16,34 @@
     <link rel="icon" type="image/x-icon" href="./images/business-web-banner-09 copy 2.jpg">
 
     <title>Mr Mohammed serour</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="icon" type="image/x-icon" href="./images/Night Club Weekend Party Post Design PSD copy.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <style>
+        /* General styles */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+
         .end {
 
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             background-color: aliceblue;
             z-index: 9999999999999999999999999999999;
             display: flex;
@@ -30,6 +51,8 @@
             justify-content: center;
             flex-direction: column;
             position: absolute;
+            top: 0px;
+            bottom: 0px;
 
         }
 
@@ -40,6 +63,234 @@
             font-size: 30px;
             text-align: center;
             cursor: copy;
+            border: 2px solid #007bff;
+        }
+
+        #end1 {
+
+            width: 200px;
+            padding: 5px;
+            background-color: #007bff;
+            border-radius: 10px;
+            outline: none;
+            font-size: 30px;
+            font-weight: 900;
+            color: #fff;
+            border: 2px solid #007bff;
+            margin-top: 10px;
+        }
+
+        /* Header styles */
+        .header {
+            width: 100%;
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            margin: 0 15px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        .bars,
+        .close {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Video container styles */
+        .video-container {
+            position: relative;
+            width: 800px;
+            max-width: 100%;
+            margin: 100px auto 20px;
+            background-color: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        /* YouTube iframe */
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        /* Overlay to block clicks */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background: transparent;
+        }
+
+        /* Custom controls container */
+        .custom-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            z-index: 20;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container:hover .custom-controls {
+            opacity: 1;
+        }
+
+        /* Progress bar container */
+        .progress-bar-container {
+            flex: 1;
+            height: 8px;
+            background: #444;
+            margin: 0 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #007bff;
+            transition: width 0.1s linear;
+        }
+
+        /* Play button */
+        .play-button {
+            cursor: pointer;
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Time display */
+        .time-display {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        /* Fullscreen button */
+        .fullscreen-button {
+            cursor: pointer;
+            font-size: 16px;
+            background: none;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .fullscreen-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Video list styles */
+        .video-list {
+            margin-top: 20px;
+            width: 800px;
+            max-width: 100%;
+        }
+
+        .video-list .vid {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-list .vid:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-list .vid.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .video-list .vid img {
+            width: 100px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .video-list .vid h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        .footer {
+            width: 100%;
+            background-color: #333;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #fff;
         }
     </style>
 </head>
@@ -47,410 +298,190 @@
 <body>
 
 
+    <div class="end">
+        <input placeholder="الكود" id="input" type="text">
+        <button id="end1">دخول</button>
+    </div>
 
 
-
-
-
-
-
+    <!-- Header -->
     <div class="header">
-        <a href="index.html"><img src="./images/a537cab8-9551-4f26-a4db-f28c3b2aa634 copy.png"></a>
+        <a href="index.html"><img src="./images/a537cab8-9551-4f26-a4db-f28c3b2aa634 copy.png" alt="Logo"></a>
         <ul class="nav">
             <li><a href="index.html#home">الرئيسية</a></li>
             <li><a href="index.html#about">ماذا نقدم</a></li>
             <li><a href="index.html#courses">الكورسات</a></li>
-            <div class="close"><i class="fa-solid fa-x"></i></div>
         </ul>
-
         <div class="bars"><i class="fa-solid fa-bars"></i></div>
     </div>
 
+    <!-- Video Player -->
+    <div class="video-container">
+        <!-- YouTube Video Player -->
+        <div id="youtube-video"></div>
 
+        <!-- Overlay to block clicks -->
+        <div class="overlay"></div>
 
-
-
-
-
-    <div class="first-course">
-
-
-        <div class="end">
-            <input placeholder="الكود" id="input" type="text">
-            <button id="end1">دخول</button>
-        </div>
-
-        <h1 class="heading">شرح السنتر تالتة ثانوى</h1>
-        <div class="gallary-container">
-            <div class="main-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XniDsemzz80?si=xlLnuYT6OogkScEq"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="save"></div>
-                <div class="save2"></div>
-
-                <h3 class="title">نحو النطق والاملاء</h3>
+        <!-- Custom Controls -->
+        <div class="custom-controls">
+            <button class="play-button" id="play-pause-btn">▶</button>
+            <div class="progress-bar-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
             </div>
-
-            <div class="video-list">
-                <div class="vid active">
-                    <video src="https://www.youtube.com/embed/XniDsemzz80?si=xlLnuYT6OogkScEq" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">نحو النطق والاملاء</h3>
-                </div>
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/Or13BSY13n4?si=eQ-YZPWDp4giuOw1" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">المدرسة الكلاسيكية</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/U_D9Wn48598?si=kZHQXbUmxAIW3gnz" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">المدرسة الكلاسيكية 2</h3>
-                </div>
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/qkQpE91gDhE?si=tZ8c83aljvfB-Qp" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">كان وأخواتها</h3>
-                </div>
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/2EJwYf_sq9s?si=PhENxyq-Kj9Sg_VP" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">نصوص متحررة</h3>
-                </div>
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/schdZAbWG_w?si=7Tkw8mChnabDUY_6" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">الهمزات نحو</h3>
-                </div>
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/WN7SL3nj-rI?si=z3OklY1f7C4v837H" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">التشبيه</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/-8qsNSxJyjY?si=yPYmAlCN2LT2nQth" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">شرح الاستعارة</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/KzoBUGXlLg4?si=AN4pdEkDs0AA6aJP" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اعمال صيغ المبالغة</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/GGMMJpOCWpw?si=WZn7VWHGaDJ0IZfN" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">مراجعة الوحدة الأولى</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/LQutSQ8BCpk?si=iE_uJJp7pgz7hq71" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">المدرسة الكلاسيكية 3</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/00xp1SXJt3M?si=NBgnL9l2MxM0qzT2" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">مراجعة الوحدة الأولى 2</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/xEBAUyscIzQ?si=iXpzcOVLxx3pcb_L" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">التشبيه 2</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/gBE1Ot9sqFw?si=7frzYQPi2h6mtSm1" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اعمال صيغ المبالغة</h3>
-                </div>
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/-zJbqbw_DhQ?si=BW2TxRqknnFVbCGx" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">مراجعة الكلاسيكية ثالثة ثانوى</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/kJ36xowNPv0?si=iGcjH8pmHAgzN6p-" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اسم الفاعل واعماله</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/Wh7rLo0H_sE?si=HCsD84N3ieeUXTNg" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">نصوص متحررة</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/s2ACaRVzfgs?si=FWmSFyJGGiHHDhY1" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اسم المفعول</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/9oBLPGaLX8o?si=k1YeDc_-S1MEdy9u" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اسم التفضيل</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/rmxJ-wur6WU?si=y9VIpaXvExKgwTBS" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">المصدر الميمى والصناعى</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/niXTb6xKKTU?si=L-6HlyA530S-JPgO" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title"> المصدر الصريح والمؤول</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/BcTRnc8b3G8?si=92ntdy_-mQbcJMNe" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">الاتحاه الوجدانى 1</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/7rv7Vw5LEZY?si=TYL5iFy2Jej416th" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">الاتحاه الوجدانى 2</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/6a7jnarEamU?si=jJKPmsCTU-YFnIy3" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اسم المرة والهيئة</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/EMp0U7PSE5g?si=mkhMKF7jP2xXpy5h" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">المقصور والمنقوص والممدود</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/DFQ-yva0GAY?si=N25EN8HmkRtgu5sX" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">السمات الفنية لمدرسة الديوان</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/U9fvTlmO8dU?si=csex4x29UK4xJSaf" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">أفعال تلزم البناء للمجهول</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/2kxswkgAw_U?si=69ppvwTevrGoGeCq" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title"> الجملة الاسمية</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/sQV2XO2KXgo?si=UYIJHNw1hWeSt9Om" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اعمال اسم الفاعل</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/gvKs1LxoakY?si=7PbZa4Km8xuqy8p7" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">اسم الفاعل</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/VU_BlTBkaWU?si=dF2SF0nzMY-cEyRg" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title"> مراجعة المقصور والمنقوص والممدود</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/sgujAxJ0QJU?si=wyFggFKOowwBJMu9" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">حل تدريبات اسم الفاعل</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/jbR-J5hQI-k?si=4R_J8Rxrb1R5HLZU" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title"> الاستعارة والكناية</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/7g9J-6kwU0g?si=syeSxbo4298jBjTA" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title"> المقال والرواية</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/MljZEbVWTlw?si=H_8ENYjbC32wOGDv" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">القصة القصيرة</h3>
-                </div>
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/po8pVbLGCrc?si=pa1AJm8uJA7uYH-k" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">مصادر الخماسى والسداسى</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/kfJ7uQHnnk4?si=nST-_12a-_Io2MnO" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">الحروف الناسخة</h3>
-                </div>
-
-
-
-                <div class="vid">
-                    <video src="https://www.youtube.com/embed/CDuYFXa2AFM?si=jhIoT0zR9RBifRdr" controls muted
-                        autoplay></video>
-                    <div class="save"></div>
-                    <div class="save2"></div>
-                    <h3 class="title">لا النافية للجنس</h3>
-                </div>
-
-
-
-
-
-            </div>
+            <span class="time-display" id="time-display">0:00 / 0:00</span>
+            <button class="fullscreen-button" id="fullscreen-btn">⤢</button>
         </div>
     </div>
 
+    <!-- Video List -->
+    <div class="video-list">
+        <div class="vid active" data-video-id="XniDsemzz80">
+            <h3 class="title">نحو النطق والاملاء</h3>
+        </div>
+        <div class="vid" data-video-id="Or13BSY13n4">
+            <h3 class="title">المدرسة الكلاسيكية</h3>
+        </div>
+        <div class="vid" data-video-id="U_D9Wn48598">
+            <h3 class="title">المدرسة الكلاسيكية 2</h3>
+        </div>
+        <div class="vid" data-video-id="qkQpE91gDhE">
+            <h3 class="title">كان وأخواتها</h3>
+        </div>
+
+        <div class="vid" data-video-id="2EJwYf_sq9s">
+            <h3 class="title">نصوص متحررة</h3>
+        </div>
+
+        <div class="vid" data-video-id="schdZAbWG_w">
+            <h3 class="title">الهمزات</h3>
+        </div>
+
+        <div class="vid" data-video-id="WN7SL3nj-rI">
+            <h3 class="title">التشبيه</h3>
+        </div>
+
+        <div class="vid" data-video-id="-8qsNSxJyjY">
+            <h3 class="title">الاستعارة</h3>
+        </div>
+
+        <div class="vid" data-video-id="KzoBUGXlLg4">
+            <h3 class="title">اعمال صيغ المبالغة</h3>
+        </div>
+
+        <div class="vid" data-video-id="GGMMJpOCWpw">
+            <h3 class="title">مراجعة الوحدة الأولى</h3>
+        </div>
+
+        <div class="vid" data-video-id="LQutSQ8BCpk">
+            <h3 class="title">المدرسة الكلاسيكية</h3>
+        </div>
+
+        <div class="vid" data-video-id="00xp1SXJt3M">
+            <h3 class="title">مراجعة الوحدة الأولى</h3>
+        </div>
+
+        <div class="vid" data-video-id="xEBAUyscIzQ">
+            <h3 class="title">التشبيه 2</h3>
+        </div>
+
+        <div class="vid" data-video-id="gBE1Ot9sqFw">
+            <h3 class="title">اعمال صيغ المبالغة</h3>
+        </div>
+
+        <div class="vid" data-video-id="-zJbqbw_DhQ">
+            <h3 class="title">مراجعة الكلاسيكية</h3>
+        </div>
+
+        <div class="vid" data-video-id="kJ36xowNPv0">
+            <h3 class="title">اسم الفاعل واعماله</h3>
+        </div>
+
+        <div class="vid" data-video-id="Wh7rLo0H_sE">
+            <h3 class="title">قراءة متحررة</h3>
+        </div>
+
+        <div class="vid" data-video-id="s2ACaRVzfgs">
+            <h3 class="title">اسم المفعول</h3>
+        </div>
+
+        <div class="vid" data-video-id="9oBLPGaLX8o">
+            <h3 class="title">اسم التفضيل</h3>
+        </div>
+
+        <div class="vid" data-video-id="rmxJ-wur6WU">
+            <h3 class="title">المصدر الميمى والصناعى</h3>
+        </div>
+
+        <div class="vid" data-video-id="niXTb6xKKTU">
+            <h3 class="title">المصدر الصريح والمؤول</h3>
+        </div>
+
+        <div class="vid" data-video-id="BcTRnc8b3G8">
+            <h3 class="title">الاتجاه الوجدانى 1</h3>
+        </div>
+
+        <div class="vid" data-video-id="7rv7Vw5LEZY">
+            <h3 class="title">الاتجاه الوجدانى 2</h3>
+        </div>
+
+        <div class="vid" data-video-id="6a7jnarEamU">
+            <h3 class="title">اسم المرة والهيئة</h3>
+        </div>
+
+        <div class="vid" data-video-id="EMp0U7PSE5g">
+            <h3 class="title">المقصور والمنقوص والممدود</h3>
+        </div>
+
+
+        <div class="vid" data-video-id="DFQ-yva0GAY">
+            <h3 class="title">مدرسة الديوان</h3>
+        </div>
+
+
+        <div class="vid" data-video-id="U9fvTlmO8dU">
+            <h3 class="title">أفعال تلزم البناء للمجهول</h3>
+        </div>
+
+        <div class="vid" data-video-id="sQV2XO2KXgo">
+            <h3 class="title">اعمال اسم الفاعل</h3>
+        </div>
+
+        <div class="vid" data-video-id="gvKs1LxoakY">
+            <h3 class="title">اسم الفاعل</h3>
+        </div>
+
+        <div class="vid" data-video-id="VU_BlTBkaWU">
+            <h3 class="title">مراجعة المقصور والمنقوص والممدود</h3>
+        </div>
+
+        <div class="vid" data-video-id="sgujAxJ0QJU">
+            <h3 class="title">حل تدريبات اسم الفاعل</h3>
+        </div>
+
+        <div class="vid" data-video-id="jbR-J5hQI-k">
+            <h3 class="title">الاستعارة والكناية</h3>
+        </div>
+
+        <div class="vid" data-video-id="7g9J-6kwU0g">
+            <h3 class="title">المقال والرواية</h3>
+        </div>
+
+        <div class="vid" data-video-id="MljZEbVWTlw">
+            <h3 class="title">القصة القصيرة</h3>
+        </div>
+
+        <div class="vid" data-video-id="po8pVbLGCrc">
+            <h3 class="title">مصادر الخماسى والسداسى</h3>
+        </div>
+
+        <div class="vid" data-video-id="kfJ7uQHnnk4">
+            <h3 class="title">الحروف الناسخة</h3>
+        </div>
+
+        <div class="vid" data-video-id="CDuYFXa2AFM">
+            <h3 class="title"> لا النافية للجنس </h3>
+        </div>
 
 
 
@@ -458,15 +489,141 @@
 
 
 
+        <!-- Add more videos here -->
+    </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2023 Mr Mohammed Serour. All rights reserved.</p>
+    </div>
 
+    <script>
+        // YouTube Iframe API integration
+        let player;
+        let isPlaying = false;
+
+        // Load YouTube API script
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Initialize YouTube Player
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-video', {
+                height: '450',
+                width: '800',
+                videoId: 'XniDsemzz80', // Default video ID
+                playerVars: {
+                    'controls': 0,        // Hide all controls
+                    'rel': 0,             // Disable related videos
+                    'showinfo': 0,        // Hide video title and uploader
+                    'modestbranding': 1,  // Hide YouTube logo
+                    'iv_load_policy': 3,  // Disable annotations
+                    'fs': 0,              // Disable fullscreen button
+                    'origin': window.location.origin // Restrict embedding to your domain
+                },
+                events: {
+                    'onReady': initializeControls,
+                    'onStateChange': updatePlayButton
+                }
+            });
+        }
+
+        // Initialize custom controls
+        function initializeControls() {
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+            const timeDisplay = document.getElementById('time-display');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+            // Play/Pause button functionality
+            playPauseBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    player.pauseVideo();
+                } else {
+                    player.playVideo();
+                }
+            });
+
+            // Update progress bar and time display
+            setInterval(() => {
+                if (player && player.getCurrentTime) {
+                    const currentTime = player.getCurrentTime();
+                    const duration = player.getDuration();
+                    const progressPercent = (currentTime / duration) * 100;
+
+                    progressBar.style.width = `${progressPercent}%`;
+                    timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+                }
+            }, 500);
+
+            // Seek functionality
+            progressContainer.addEventListener('click', (e) => {
+                const rect = progressContainer.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const progressWidth = rect.width;
+                const duration = player.getDuration();
+
+                player.seekTo((clickX / progressWidth) * duration, true);
+            });
+
+            // Fullscreen functionality
+            fullscreenBtn.addEventListener('click', () => {
+                const videoContainer = document.querySelector('.video-container');
+                if (!document.fullscreenElement) {
+                    videoContainer.requestFullscreen().catch(err => {
+                        alert(`Error attempting to enable fullscreen mode: ${err.message}`);
+                    });
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+        }
+
+        // Update play button based on video state
+        function updatePlayButton(event) {
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            if (event.data === YT.PlayerState.PLAYING) {
+                isPlaying = true;
+                playPauseBtn.textContent = '⏸'; // Pause icon
+            } else {
+                isPlaying = false;
+                playPauseBtn.textContent = '▶'; // Play icon
+            }
+        }
+
+        // Format time in mm:ss
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+            return `${minutes}:${secs}`;
+        }
+
+        // Video list interaction
+        const videoList = document.querySelectorAll('.video-list .vid');
+        videoList.forEach(video => {
+            video.addEventListener('click', () => {
+                videoList.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+
+                const videoId = video.getAttribute('data-video-id');
+                player.loadVideoById(videoId); // Load the selected video
+            });
+        });
+
+        // Prevent right-click to avoid accessing YouTube interface
+        document.querySelector('.video-container').addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
+    </script>
 
 
     <script src="script.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="courses.js"></script>
-
 
 </body>
 
